@@ -43,6 +43,16 @@ class DbHelper{
           "password TEXT)"
     );
     print("Table Created");
+    insertUser(initInsertUser());
+    print("User Inserted");
+  }
+
+  User initInsertUser(){
+    User user = User();
+    user.userName = "majoo";
+    user.email = "majoo@gmail.com";
+    user.password = "123456";
+    return user;
   }
 
   //Insert

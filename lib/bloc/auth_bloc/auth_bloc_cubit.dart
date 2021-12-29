@@ -8,7 +8,7 @@ part 'auth_bloc_state.dart';
 class AuthBlocCubit extends Cubit<AuthBlocState> {
   AuthBlocCubit() : super(AuthBlocInitialState());
 
-  void fetchHistoryLogin() async{
+  Future<void> fetchHistoryLogin() async{
     emit(AuthBlocInitialState());
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     bool isLoggedIn = sharedPreferences.getBool("is_logged_in");
@@ -23,7 +23,7 @@ class AuthBlocCubit extends Cubit<AuthBlocState> {
     }
   }
 
-  void loginUser(User user) async{
+  Future<void> loginUser(User user) async{
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     emit(AuthBlocLoadingState());
     await sharedPreferences.setBool("is_logged_in",true);
