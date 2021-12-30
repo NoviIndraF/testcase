@@ -10,7 +10,7 @@ createInstance() async {
       connectTimeout: 12000,
       receiveTimeout: 12000,
       headers: {
-        "x-rapidapi-key": "6af4f77398mshb3f6cd027729468p1d6d31jsn038947888a17",
+        "x-rapidapi-key": "e3467e791dmsh47233efcc5982c3p1cff02jsn5f0ca168691b",
         "x-rapidapi-host": "imdb8.p.rapidapi.com"
       });
   dioInstance = new Dio(options);

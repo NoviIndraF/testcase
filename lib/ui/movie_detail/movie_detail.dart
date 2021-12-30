@@ -79,7 +79,7 @@ class MovieDetailState extends State<MovieDetail> {
                 ),
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top: 12, bottom: 8),
+                    margin: EdgeInsets.only(top: 24, bottom: 8),
                     child: Text(
                       widget.data.l,
                       style: TextStyle(

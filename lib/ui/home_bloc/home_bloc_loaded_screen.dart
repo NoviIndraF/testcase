@@ -75,7 +75,7 @@ class _HomeBlocLoadedScreenState extends State<HomeBlocLoadedScreen> {
                           child: IconButton(
                             icon: Icon(Icons.logout, color: ColorPallete.white,),
                             onPressed: () {
-                              Navigator.push(context, new MaterialPageRoute(builder: (context) {
+                              Navigator.pop(context, new MaterialPageRoute(builder: (context) {
                                 return LoginPage();
                               }));
                             },
@@ -136,8 +136,6 @@ class _HomeBlocLoadedScreenState extends State<HomeBlocLoadedScreen> {
   Widget movieItemWidget(Data data, BuildContext context) {
     return GestureDetector(
       onTap: () {
-        selectedCard++;
-        print(data.l);
         Navigator.push(
             context,
             new MaterialPageRoute(
